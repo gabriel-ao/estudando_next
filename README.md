@@ -33,10 +33,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Dados de API para consumo
+
 the movie db
 https://developers.themoviedb.org/3/getting-started/introduction
+https://developers.themoviedb.org/3/trending/get-trending
 
 chaves api
 https://www.themoviedb.org/settings/api
 
-https://developers.themoviedb.org/3/trending/get-trending
+## Canal exemplo
+
+canal youtube
+https://www.youtube.com/watch?v=xjrDEZQ5LnA&t=2171s
+
+assistindo 54:00
