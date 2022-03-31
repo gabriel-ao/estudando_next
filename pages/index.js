@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home({ list }) {
@@ -15,15 +16,19 @@ export default function Home({ list }) {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Filmes em Destaque</h1>
+
+        <Link href='/busca'>Ir para a busca</Link>
         <ul>
           {list.map((item) => (
             <li key={item.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-                width='150'
-              />
-              <br />
-              {item.title}
+              <a href={`/movie/${item.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                  width='150'
+                />
+                <br />
+                {item.title}
+              </a>
             </li>
           ))}
         </ul>

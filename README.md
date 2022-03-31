@@ -47,4 +47,4 @@ https://www.themoviedb.org/settings/api
 canal youtube
 https://www.youtube.com/watch?v=xjrDEZQ5LnA&t=2171s
 
-assistindo 54:00
+assistindo 108:00
