@@ -3,6 +3,7 @@ import { apiBase, apiKey } from '../../lib/tmdb';
 export default async (req, res) => {
   let search = req.query.q;
 
+  console.log(' req.query.q ', req.query);
   const result = await fetch(
     `${apiBase}/search/movie?api_key=${apiKey}&language=pt-BR&query=${search}`
   );

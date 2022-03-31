@@ -8,7 +8,8 @@ import styles from '../styles/Home.module.css';
 import { useState } from 'react';
 
 export default function Home({ list }) {
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState('');
+  const [movieList, setMovieList] = useState([]);
 
   const handleSearch = async () => {
     if (searchText != '') {
@@ -17,7 +18,9 @@ export default function Home({ list }) {
       );
       const json = await result.json();
 
-      console.log('handleSearch ', json);
+      console.log('retornou da busca => ', json.list);
+
+      setMovieList(json.list);
     }
   };
 
@@ -36,6 +39,25 @@ export default function Home({ list }) {
           onChange={(e) => setSearchText(e.target.value)}
         />
         <button onClick={handleSearch}> Buscar</button>
+
+        <hr />
+
+        <ul>
+          {movieList.map((item) => (
+            <li key={item.id}>
+              <a href={`/movie/${item.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                  width='150'
+                />
+                <br />
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <hr />
+        <Link href='/'>Tela inicial</Link>
       </main>
     </div>
   );
